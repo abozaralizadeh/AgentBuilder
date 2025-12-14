@@ -33,3 +33,4 @@ python main.py
 
 ## Reference
 - “Use Azure OpenAI and APIM with the OpenAI Agents SDK” – Microsoft Tech Community: https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/use-azure-openai-and-apim-with-the-openai-agents-sdk/4392537
+- OpenAI Agents SDK Python docs: https://openai.github.io/openai-agents-python/
