@@ -17,7 +17,7 @@ openai_client = AsyncAzureOpenAI(
 )
 
 
-print("AZURE_OPENAI_API_KEY", os.getenv("AZURE_OPENAI_API_KEY"))
+print("AZURE_OPENAI_API_KEY", "set" if os.getenv("AZURE_OPENAI_API_KEY") else "missing")
 print("AZURE_OPENAI_API_VERSION", os.getenv("AZURE_OPENAI_API_VERSION"))
 print("AZURE_OPENAI_ENDPOINT", os.getenv("AZURE_OPENAI_ENDPOINT"))
 print("AZURE_OPENAI_DEPLOYMENT", os.getenv("AZURE_OPENAI_DEPLOYMENT"))
