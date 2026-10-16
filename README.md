@@ -29,7 +29,7 @@ This repo contains a minimal Python example that mirrors the workflow from Micro
 source .venv/bin/activate
 python main.py
 ```
-`main.py` loads the Azure credentials, initializes an `AsyncAzureOpenAI` client, and runs a triage agent that chooses between math and history tutors. Guardrails are included to mimic the behavior described in the Microsoft article—non-homework inputs are blocked so you can observe how the SDK surfaces guardrail results.
+`main.py` loads the Azure credentials, initializes an `AsyncAzureOpenAI` client, and runs a triage agent that chooses between math and history tutors. A homework guardrail is included to mimic the behavior described in the Microsoft article, but it is commented out in `main.py`—uncomment the triage agent's `input_guardrails` block to block non-homework inputs and observe how the SDK surfaces guardrail results.
 
 ## Reference
 - “Use Azure OpenAI and APIM with the OpenAI Agents SDK” – Microsoft Tech Community: https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/use-azure-openai-and-apim-with-the-openai-agents-sdk/4392537
