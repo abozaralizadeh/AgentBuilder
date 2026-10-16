@@ -49,8 +49,10 @@ a `model` from `OPENAI_DEFAULT_MODEL`, and trace export uses `OPENAI_API_KEY`.
 
 ## Conventions / gotchas
 
-- **`main.py` prints all four `AZURE_OPENAI_*` values at startup, including the API key.** Don't
-  paste its output into issues, logs or chats.
+- At startup `main.py` prints the API version, endpoint and deployment, and for the key only
+  `AZURE_OPENAI_API_KEY set` or `missing`; never print the key itself. The client is built before
+  these lines, so with no key (or an empty one) the openai client raises "Missing credentials"
+  first and nothing is printed (checked with openai 3.31).
 - `model = OpenAIResponsesModel(model="gpt-5.2", ...)` is created, but every `model=model` line on
   the agents is commented out. The agents therefore use the SDK's default model name (which changes
   between SDK releases) through the default client and the Responses API.
